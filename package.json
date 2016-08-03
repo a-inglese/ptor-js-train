@@ -1,0 +1,22 @@
+{
+  "name": "ptor-js-train",
+  "version": "0.0.1",
+  "description": "Training Automation",
+  "author": "Ezequiel Uhrig <euhrig@despegar.com>",
+  "scripts": {
+    "all": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zuhrig/ptor-js-train"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "protractor": "*"
+  },
+  "preferGlobal": true,
+  "private": true,
+  "analyze": true,
+  "license": "MIT"
+}
