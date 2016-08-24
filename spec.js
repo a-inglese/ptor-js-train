@@ -18,11 +18,17 @@ describe('Protractor Demo App', function() {
     expect(items.count()).not.toBeLessThan(0);
   });
 
-  it("Should be able to filter", function () {
+  it("Should be able to filter", function (done) {
     var items = element.all(by.repeater('item in search.items'));
     var filter = element(by.model('search.keywords'));
     filter.sendKeys('Esenciales');
     filter.sendKeys(protractor.Key.ENTER);
     expect(items.count()).toEqual(1);
+    done();
+  });
+
+  it("Should be able to display that filtered cluster", function () {
+    var items = element.all(by.repeater('item in search.items'));
+    expect(items.first().isDisplayed()).toBe(true);
   });
 });
