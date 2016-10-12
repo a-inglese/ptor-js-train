@@ -1,7 +1,11 @@
-describe('Protractor Demo App', function() {
-  it('should have a title', function() {
-    browser.get('http://www.despegar.com.ar/paquetes');
 
-    expect(browser.getTitle()).toEqual('Super Calculator');
+describe('Protractor Demo App pass', function() {
+
+  it('should be able to see the first cluster', function() {
+    var clusters = element.all(by.repeater('offer in tripBoard.data.hotelOffers.data.elements'));
+     clusters.then(function(){
+       expect(clusters.first().isDisplayed()).toBe(true);
+     });
   });
+
 });
